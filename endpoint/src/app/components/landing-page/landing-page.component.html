@@ -1,0 +1,25 @@
+<main>
+    <div *ngIf="foundRecord">
+        <dl class="lh-title pa4 mt0">
+            <dt class="f3 b">Rule</dt>
+            <dd class="f3 lh-copy">{{passengerRecord.rule}}</dd>
+            <dt class="f3 b">First Name</dt>
+            <dd class="f3 lh-copy">{{passengerRecord.firstName}}</dd>
+            <dt class="f3 b mt2">Last Name</dt>
+            <dd class="f3 lh-copy">{{passengerRecord.lastName}}</dd>
+            <dt class="f3 b mt2">Email</dt>
+            <dd class="f3 lh-copy">{{passengerRecord.email}}</dd>
+            <dt class="f3 b mt2">Home City</dt>
+            <dd class="f3 lh-copy">{{passengerRecord.homeCity}}</dd>
+            <dt class="f3 b mt2">Favorite City</dt>
+            <dd class="f3 lh-copy">{{passengerRecord.favoriteCity}}</dd>
+            <dt class="f3 b mt2">Token</dt>
+            <dd class="f3 lh-copy">{{passengerRecord.token}}</dd>
+        </dl>
+    </div>
+    <div *ngIf="!foundRecord">
+        <dl class="lh-title pa4 mt0">
+            <dt class="f3 b">No Record Found</dt>
+        </dl>
+    </div>
+</main>

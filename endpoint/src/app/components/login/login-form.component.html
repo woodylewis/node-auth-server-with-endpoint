@@ -1,0 +1,29 @@
+<main class="pa4 black-80">
+    <form class="measure center" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <fieldset id="login" class="ba b--transparent ph0 mh0">
+        <div class="mt3">
+            <label class="db fw6 lh-copy f3" for="userId">User Id</label>
+            <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="text" id="userId" required [(ngModel)]="passenger.userId" name="userId" #userId="ngModel">
+            <div *ngIf="userId.errors && (userId.dirty || userId.touched)" class="alert alert-danger">
+                <div [hidden]="!userId.errors.required">
+                    userId required
+                </div>
+            </div>
+        </div>
+        <div class="mv3">
+            <label class="db fw6 lh-copy f3" for="password">Password</label>
+            <input class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="password" id="password" required [(ngModel)]="passenger.password" name="password" #password="ngModel">
+            <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+                <div [hidden]="!password.errors.required">
+                    password required
+                </div>
+            </div>
+        </div>
+        </fieldset>
+        <div class="">
+        <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f3 dib" type="submit" value="Sign in">
+        </div>
+    </form>
+</main>

@@ -1,0 +1,26 @@
+version: '2'
+ 
+services:
+  mongodb:
+    image: mongo
+    container_name: ng-cms-mongodb
+    ports:
+      - 27017:27017
+  server:
+    build: ./server
+    container_name: ng-cms-server
+    ports:
+      - "3000:8080"
+    links:
+      - mongodb:ng-cms-mongodb
+    depends_on:
+      - mongodb  
+  client:
+    build: ./endpoint
+    container_name: ng-cms-client
+    ports:
+      - "3200:8080"
+    links:
+      - server:ng-cms-server
+    depends_on:
+      - server  

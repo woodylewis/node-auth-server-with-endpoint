@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon index.js",
+    "start": "node index.js",
+    "test-unit": "NODE_ENV=test mocha --require co-mocha 'tests/*.spec.js'"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.12.6",
+    "rc": "^1.2.2",
+    "rx": "^4.1.0",
+    "rx-node": "^1.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "co-mocha": "^1.2.1",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "sinon": "^4.1.1",
+    "sinon-chai": "^2.14.0"
+  }
+}

@@ -1,0 +1,79 @@
+<main class="pa4 black-80">
+    <form class="measure center" (ngSubmit)="onSubmit()" #registerForm="ngForm">
+        <fieldset id="register" class="ba b--transparent ph0 mh0">
+        <div class="mt3">
+            <label class="db fw6 lh-copy f3" for="userId">User Id</label>
+            <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="text" id="userId" required [(ngModel)]="registrant.userId" name="userId" #userId="ngModel">
+            <div *ngIf="userId.errors && (userId.dirty || userId.touched)" class="alert alert-danger">
+                <div [hidden]="!userId.errors.required">
+                    User Id required
+                </div>
+            </div>
+        </div>
+        <div class="mv3">
+            <label class="db fw6 lh-copy f3" for="password">Password</label>
+            <input class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="password" id="password" required [(ngModel)]="registrant.password" name="password" #password="ngModel">
+            <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+                <div [hidden]="!password.errors.required">
+                    Password required
+                </div>
+            </div>
+        </div>
+        <div class="mt3">
+            <label class="db fw6 lh-copy f3" for="firstName">First Name</label>
+            <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="text" id="firstName" required [(ngModel)]="registrant.firstName" name="firstName" #firstName="ngModel">
+            <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+                <div [hidden]="!firstName.errors.required">
+                    First Name required
+                </div>
+            </div>
+        </div>
+        <div class="mt3">
+            <label class="db fw6 lh-copy f3" for="lastName">Last Name</label>
+            <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="text" id="lastName" required [(ngModel)]="registrant.lastName" name="lastName" #lastName="ngModel">
+            <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+                <div [hidden]="!lastName.errors.required">
+                    Last Name required
+                </div>
+            </div>
+        </div>
+        <div class="mt3">
+            <label class="db fw6 lh-copy f3" for="email">Email</label>
+            <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="email" id="email" required [(ngModel)]="registrant.email" name="email" #email="ngModel">
+            <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+                <div [hidden]="!email.errors.required">
+                    Email required
+                </div>
+            </div>
+        </div>
+        <div class="mt3">
+            <label class="db fw6 lh-copy f3" for="homeCity">Home City</label>
+            <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="text" id="homeCity" required [(ngModel)]="registrant.homeCity" name="homeCity" #homeCity="ngModel">
+            <div *ngIf="homeCity.errors && (homeCity.dirty || homeCity.touched)" class="alert alert-danger">
+                <div [hidden]="!homeCity.errors.required">
+                    Home City required
+                </div>
+            </div>
+        </div>
+        <div class="mt3">
+            <label class="db fw6 lh-copy f3" for="favoriteCity">Favorite City</label>
+            <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+            type="text" id="favoriteCity" required [(ngModel)]="registrant.favoriteCity" name="favoriteCity" #favoriteCity="ngModel">
+            <div *ngIf="favoriteCity.errors && (favoriteCity.dirty || favoriteCity.touched)" class="alert alert-danger">
+                <div [hidden]="!favoriteCity.errors.required">
+                    Faavorite City required
+                </div>
+            </div>
+        </div>
+        </fieldset>
+        <div class="">
+        <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f3 dib" type="submit" value="Sign in">
+        </div>
+    </form>
+</main>

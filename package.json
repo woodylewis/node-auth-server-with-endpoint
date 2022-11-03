@@ -1,0 +1,17 @@
+{
+  "name": "ng-app-express",
+  "version": "1.0.0",
+  "description": "Express API server and Angular client",
+  "scripts": {
+    "build-endpoint": "cd endpoint && yarn",
+    "endpoint": "cd endpoint && yarn start",
+    "build-server": "cd server && yarn",
+    "dev-server": "cd server && nodemon index.js",
+    "server": "cd server && node index.js",
+    "docker:up":"cd endpoint && yarn build && cd .. && docker-compose up --build -d",
+    "docker:down":"docker-compose down"
+  },
+  "author": "Woody Lewis <woodrow.lewis@jetblue.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
